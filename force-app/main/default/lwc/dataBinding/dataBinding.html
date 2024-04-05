@@ -11,10 +11,14 @@
     </div>
     <div class="slds-var-m-around_medium">
       <!-- Card Body  -->
-      Hello {userName}
-
-      <lightning-input class="slds-var-m-around_medium" type="text" label="Enter your name" name={userName}
-        onchange={changeHandler}></lightning-input>
+      <p>This text uses dynamic binding to render name 👋<span>Hello {firstName} {lastName}</span></p>
+      <p>This text uses getter to render full name in capitals🫂<span>Hello {fullNameInCapitals}</span></p>
+      <lightning-input class="slds-var-m-around_medium" type="text" label="Enter your first name" name="firstName"
+        onchange={changeHandler}>
+      </lightning-input>
+      <lightning-input class="slds-var-m-around_medium" type="text" label="Enter your last name" name="lastName"
+        onchange={changeHandler}>
+      </lightning-input>
     </div>
   </lightning-card>
 </template>
