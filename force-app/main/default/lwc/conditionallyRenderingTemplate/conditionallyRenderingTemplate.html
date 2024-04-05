@@ -1,0 +1,32 @@
+<template>
+
+  <lightning-card icon-name="custom:custom14" variant="base">
+    <div slot="title">
+      Conditionally Rendering HTML
+    </div>
+    <div slot="actions">
+
+    </div>
+    <div slot="footer">
+      <template lwc:if={bothDetails}>
+        <p>Both checkboxes are checked</p>
+      </template>
+      <template lwc:elseif={firstDetail}>
+        <p>Only checkbox One is checked</p>
+      </template>
+      <template lwc:elseif={secondDetail}>
+        <p>Only checkbox Two is checked</p>
+      </template>
+      <template lwc:else>
+        <p>This para will hide if both checkbox are true</p>
+      </template>
+    </div>
+    <div>
+      <!-- Card Body  -->
+      <lightning-input class="slds-var-m-around_medium" type="checkbox" label="Show First Detail" name="input1"
+        onchange={handleChange}></lightning-input>
+      <lightning-input class="slds-var-m-around_medium" type="checkbox" label="Show Second Detail" name="input2"
+        onchange={handleChange}></lightning-input>
+    </div>
+  </lightning-card>
+</template>
