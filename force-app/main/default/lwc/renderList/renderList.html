@@ -1,0 +1,29 @@
+<template>
+  <lightning-card icon-name="utility:list" variant="base">
+    <div slot="title">
+      Render List
+    </div>
+    <div slot="actions">
+
+    </div>
+    <div slot="footer">
+
+    </div>
+    <div class="slds-var-m-around_medium">
+      <!-- Card Body  -->
+      USING FOR: EACH LOOP
+      <template for:each={contacts} for:item="contact">
+        <p key={contact.id} class="slds-var-m-around_small">{contact.name}, {contact.age}, {contact.profile}</p>
+      </template>
+
+      USING ITERATOR
+      <template iterator:it={contacts}>
+        <div key={it.value.id} class="slds-var-m-around_medium">
+          <p if:true={it.first} style="border-top: 1px solid black; padding-top: 5px;"></p>
+          <p class="slds-var-m-around_small">{it.value.name}, {it.value.age}, {it.value.profile}</p>
+          <p if:true={it.last} style="border-bottom: 1px solid black; padding-bottom: 5px;"></p>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>
