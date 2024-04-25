@@ -1,11 +1,9 @@
 <template>
-  <lightning-card icon-name="utility:level_down" variant="base">
-    <div slot="title">
-      Child Component
+  <div class="slds-m-around_medium">
+    <!-- <p class="slds-var-m-around_medium">{itemName}</p> -->
+    <p>THIS IS CHILD COMPONENT</p>
+    <div class={getClassName}>
+      <p>{message}</p>
     </div>
-    <div>
-      <!-- Card Body  -->
-      <p class="slds-m-around_medium">{itemName}</p>
-    </div>
-  </lightning-card>
+  </div>
 </template>
