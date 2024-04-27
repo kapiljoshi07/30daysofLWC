@@ -6,7 +6,7 @@
     <!-- <div class="slds-m-around_medium">
       Card Body 
       <c-child-component item-name="Cream" class-name="info"></c-child-component>
-    </div> -->
+    </div> 
     <div>
       <c-child-component message="Indicates a dangerous or potentially negative action"></c-child-component>
       <c-child-component message="Success! Indicates a successful or positive action"
@@ -16,5 +16,8 @@
       <c-child-component message="Warning! Indicates a warning that might need attention"
         class-name="warning"></c-child-component>
     </div>
+      -->
+    <div>Parent: {serializedObj}</div>
+    <c-child-component obj={obj}></c-child-component>
   </lightning-card>
 </template>
